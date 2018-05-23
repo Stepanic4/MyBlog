@@ -1,10 +1,35 @@
+
+a {
+    text-decoration: none !important;
+}
+
 .App {
   text-align: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+.preload {
+    text-align: center;
+    padding: 20px;
+}
+
+.header-top {
+    text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 3s linear;
   height: 50px;
+}
+
+.switch li {
+    background-color: darkgrey;
+    padding: 2px 10px;
+    margin: 5px auto;
+    border-radius: 5px;
 }
 
 @keyframes App-logo-spin {

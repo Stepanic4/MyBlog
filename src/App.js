@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import "bootstrap/dist/css/bootstrap.css";
-import "bootswatch/dist/cosmo/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.css";
 
 import {Navbar, NavItem, Nav, Grid, Row, Col} from "react-bootstrap";
 
@@ -33,7 +32,7 @@ class WeatherDisplay extends Component {
 
     render() {
         const weatherData = this.state.weatherData;
-        if (!weatherData) return <div>Loading</div>;
+        if (!weatherData) return <div className="preload">Loading</div>;
         const weather = weatherData.weather[0];
         const iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
         return (
@@ -64,7 +63,9 @@ class App extends Component {
         return (
 
             <div>
-                <img src={logo} className="App-logo" alt="logo"/>
+                <div className="header-top">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                </div>
                 <Navbar>
                     <Navbar.Header>
                         <Navbar.Brand>
@@ -76,18 +77,20 @@ class App extends Component {
                     <Row>
                         <Col md={4} sm={4}>
                             <h3>Select a city</h3>
-                            <Nav
-                                bsStyle="pills"
-                                stacked
-                                activeKey={activePlace}
-                                onSelect={index => {
-                                    this.setState({activePlace: index});
-                                }}
-                            >
-                                {PLACES.map((place, index) => (
-                                    <NavItem key={index} eventKey={index}>{place.name}</NavItem>
-                                ))}
-                            </Nav>
+                            <div className="switch">
+                                <Nav
+                                    bsStyle="pills"
+                                    stacked
+                                    activeKey={activePlace}
+                                    onSelect={index => {
+                                        this.setState({activePlace: index});
+                                    }}
+                                >
+                                    {PLACES.map((place, index) => (
+                                        <NavItem key={index} eventKey={index}>{place.name}</NavItem>
+                                    ))}
+                                </Nav>
+                            </div>
                         </Col>
                         <Col md={8} sm={8}>
                             <WeatherDisplay key={activePlace} zip={PLACES[activePlace].zip}/>
