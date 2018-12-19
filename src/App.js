@@ -10,7 +10,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <div className="header-top">
+                <div className="header-top pt-5">
                     <img src={logo} className="App-logo" alt="logo"/>
                 </div>
                 <Weather />
