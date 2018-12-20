@@ -1,19 +1,30 @@
-
 import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
-import "bootstrap/dist/css/bootstrap.css";
+import './styles/App.css';
 import Weather from "./componenets/Weather";
+import Description from "./componenets/Description";
+import Header from "./componenets/Header";
+import {Footer} from "./componenets/footer";
 
 class App extends Component {
 
     render() {
         return (
             <div>
-                <div className="header-top pt-5">
-                    <img src={logo} className="App-logo" alt="logo"/>
+                <div className={'wrapper'}>
+                    <Header/>
+                    <div className={'content'}>
+                        <h4 className={'text-center py-20 pt-50'}>Welcome to the developer blog!</h4>
+                        <div className={'row'}>
+                            <div className={'col d-sm-px-0 mb-4'}>
+                                <Weather/>
+                            </div>
+                            <div className={'col-sm'}>
+                                <Description/>
+                            </div>
+                        </div>
+                    </div>
+                    <Footer/>
                 </div>
-                <Weather />
             </div>
         );
     }

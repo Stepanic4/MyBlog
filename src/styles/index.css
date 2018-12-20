@@ -1,0 +1,30 @@
+
+h4 {
+  font-family: Tusj, sans-serif;
+  font-style: italic;
+}
+
+.logo-sun {
+  max-width: 250px;
+  padding-left: 10px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+  color: white;
+  background-color: rgba(22, 131, 255, 0.8);
+}
+
+.footer a {
+  color: white;
+}

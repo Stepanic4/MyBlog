@@ -1,6 +1,6 @@
 import React from 'react';
 import {Component} from "react";
-import {Navbar, NavItem, Nav, Grid, Row, Col} from "react-bootstrap";
+import {NavItem, Nav, Grid, Row, Col} from "react-bootstrap";
 
 const PLACES = [
     {name: "Kharkiv", zip: "61157"},
@@ -33,15 +33,15 @@ class WeatherDisplay extends Component {
         const weather = weatherData.weather[0];
         const iconUrl = "http://openweathermap.org/img/w/" + weather.icon + ".png";
         return (
-            <div className="text-center">
-                <h1>
+            <div>
+                <h5 className={'mb-0'}>
                     {weather.main} in {weatherData.name}
                     <img src={iconUrl} alt={weatherData.description}/>
-                </h1>
-                <p>Температура: {weatherData.main.temp}°</p>
-                <p>Максимальная температура: {weatherData.main.temp_max}°</p>
-                <p>Минимальная температура: {weatherData.main.temp_min}°</p>
-                <p>Скорость ветра: {weatherData.wind.speed} м/с</p>
+                </h5>
+                <p>Temperature: {weatherData.main.temp}°</p>
+                <p>Maximum temperature: {weatherData.main.temp_max}°</p>
+                <p>Minimum temperature: {weatherData.main.temp_min}°</p>
+                <p>Wind speed: {weatherData.wind.speed} м/с</p>
             </div>
         );
     }
@@ -59,18 +59,14 @@ class Weather extends Component {
         const activePlace = this.state.activePlace;
         return (
 
-            <div>
-                <Navbar>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            React Simple Weather App
-                        </Navbar.Brand>
-                    </Navbar.Header>
-                </Navbar>
+            <div className="block-weather d-sm-m-auto block-shadow-blue">
+                <div className={'container pt-3 h5'}>
+                    React Simple Weather App
+                </div>
                 <Grid>
                     <Row>
-                        <Col md={4} sm={4}>
-                            <h3>Select a city</h3>
+                        <Col md={12}>
+                            <h5>Select a city</h5>
                             <div className="switch">
                                 <Nav
                                     bsStyle="pills"
@@ -86,8 +82,11 @@ class Weather extends Component {
                                 </Nav>
                             </div>
                         </Col>
-                        <Col md={8} sm={8}>
+                        <Col md={12}>
                             <WeatherDisplay key={activePlace} zip={PLACES[activePlace].zip}/>
+                        </Col>
+                        <Col md={12}>
+                            Today is: {(new Date).toDateString()}
                         </Col>
                     </Row>
                 </Grid>
