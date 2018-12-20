@@ -1,0 +1,77 @@
+@font-face {
+    font-family: Tusj;
+    src: url('../fonts/fff_tusj/Tusj.ttf');
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.App {
+  text-align: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+.preload {
+    text-align: center;
+    padding: 20px;
+}
+
+.header-top {
+    position: fixed;
+    width: 100%;
+    font-family: Tusj, sans-serif;
+    font-style: italic;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: rgba(22, 131, 255, 0.8);
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 3s linear;
+  height: 50px;
+}
+
+.switch li {
+    background-color: rgba(22, 131, 255, 0.8);
+    padding: 0.07em 0.7em;
+    margin: 5px auto;
+    border-radius: 2px;
+}
+
+.switch a {
+    color: #ffffff;
+}
+
+.block-weather {
+    max-width: 320px;
+    min-width: 300px;
+    min-height: 300px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.block-weather p {
+    margin-bottom: 0;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 576px) {
+    .d-sm-px-0 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .d-sm-m-auto {
+        margin: auto;
+    }
+}
