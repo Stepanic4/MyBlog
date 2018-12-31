@@ -36,6 +36,7 @@ a {
 
 .header-top {
     position: fixed;
+    z-index: 1;
     width: 100%;
     font-family: Tusj, sans-serif;
     font-style: italic;
