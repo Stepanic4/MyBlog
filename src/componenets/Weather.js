@@ -59,7 +59,7 @@ class Weather extends Component {
         const activePlace = this.state.activePlace;
         return (
 
-            <div className="block-weather d-sm-m-auto block-shadow-blue">
+            <div className="block-weather d-sm-m-auto block-shadow-blue d-320-m-15">
                 <div className={'container pt-3 h5'}>
                     React Simple Weather App
                 </div>
