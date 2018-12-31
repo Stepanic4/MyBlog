@@ -7,8 +7,10 @@ class Header extends Component {
     render() {
         return (
             <div className="header-top px-20">
+                <div className={'wrap'}>
                 <img src={logo} className="App-logo" alt="logo"/>
                 <h3 className="mb-0 pr-md-4">Developer Blog</h3>
+                </div>
             </div>
         );
     }

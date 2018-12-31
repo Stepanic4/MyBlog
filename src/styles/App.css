@@ -7,6 +7,20 @@ a {
     text-decoration: none !important;
 }
 
+.row {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.wrap {
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: inherit;
+    margin: auto;
+}
+
 .App {
   text-align: center;
 }
@@ -42,6 +56,11 @@ a {
     padding: 0.07em 0.7em;
     margin: 5px auto;
     border-radius: 2px;
+}
+
+.switch {
+    margin-left: -15px;
+    margin-right: -15px;
 }
 
 .switch a {

@@ -18,7 +18,7 @@ class App extends Component {
                             <div className={'col d-sm-px-0 mb-4'}>
                                 <Weather/>
                             </div>
-                            <div className={'col-sm'}>
+                            <div className={'col-sm text-center'}>
                                 <Description/>
                             </div>
                         </div>
